@@ -15,7 +15,6 @@ void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
-
   runApp(
     ScreenUtilInit(
         designSize: const Size(375, 667),
@@ -29,9 +28,6 @@ void main() {
             debugShowCheckedModeBanner: false,
             theme: ThemeData(primarySwatch: Colors.grey),
             themeMode: ThemeMode.system,
-            onInit: () {
-              print("init completed");
-            },
             defaultTransition: Transition.rightToLeft,
             builder: EasyLoading.init(),
             localizationsDelegates: const [

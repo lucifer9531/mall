@@ -45,6 +45,7 @@ dependencies:
   flutter_html: ^3.0.0-alpha.5
   flutter_easyloading: ^3.0.3
   flutter_native_splash: ^2.2.19
+  pull_to_refresh: ^2.0.0
 
 dev_dependencies:
   flutter_test:
