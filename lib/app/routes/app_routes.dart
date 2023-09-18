@@ -3,12 +3,12 @@ part of 'app_pages.dart';
 
 abstract class Routes {
   Routes._();
-  static const splash = _Paths.splash;
-  static const tabs = _Paths.tabs;
+  static const SPlASH = _Paths.SPlASH;
+  static const TABS = _Paths.TABS;
 }
 
 abstract class _Paths {
   _Paths._();
-  static const splash = '/splash';
-  static const tabs = '/tabs';
+  static const SPlASH = '/splash';
+  static const TABS = '/tabs';
 }

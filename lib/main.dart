@@ -24,7 +24,7 @@ void main() {
         builder: (context, child) {
           return GetMaterialApp(
             title: "熟客来采",
-            initialRoute: AppPages.initial,
+            initialRoute: AppPages.INITIAL,
             getPages: AppPages.routes,
             debugShowCheckedModeBanner: false,
             theme: ThemeData(primarySwatch: Colors.grey),

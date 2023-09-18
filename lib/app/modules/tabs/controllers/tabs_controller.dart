@@ -1,12 +1,29 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mall/app/modules/home/views/home_view.dart';
+import 'package:mall/app/modules/me/views/me_view.dart';
 
 class TabsController extends GetxController {
-  //TODO: Implement TabsController
 
-  final count = 0.obs;
+  RxInt currentIndex = 0.obs;
+
+  PageController pageController = Get.arguments != null
+      ? PageController(initialPage: Get.arguments["initialPage"])
+      : PageController(initialPage: 0);
+
+  final List<Widget> pages = [
+    const HomeView(),
+    const MeView(),
+  ];
+
   @override
   void onInit() {
     super.onInit();
+
+    if (Get.arguments != null) {
+      currentIndex.value = Get.arguments["initialPage"];
+      update();
+    }
   }
 
   @override
@@ -19,5 +36,8 @@ class TabsController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+  void setCurrentIndex(int index) {
+    currentIndex.value = index;
+    update();
+  }
 }
