@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mall/app/modules/category/views/category_view.dart';
 import 'package:mall/app/modules/home/views/home_view.dart';
 import 'package:mall/app/modules/me/views/me_view.dart';
 
@@ -13,6 +14,7 @@ class TabsController extends GetxController {
 
   final List<Widget> pages = [
     const HomeView(),
+    const CategoryView(),
     const MeView(),
   ];
 
